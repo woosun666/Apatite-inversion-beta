@@ -1,0 +1,3 @@
+# Normalize line endings across both machines (store LF in the repo).
+# Prevents spurious whole-file diffs from CRLF/LF differences.
+* text=auto

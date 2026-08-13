@@ -1,0 +1,47 @@
+# Code-only repo for the Ok Tedi apatite / melt-viscosity toolkit.
+# Data and generated outputs stay out of git.
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- Tooling / editor ---
+.claude/
+.vscode/
+.idea/
+
+# --- PyInstaller build artifacts (build_win.ps1) ---
+build/
+dist/
+*.spec
+
+# --- generated sample data (make_sample_project.py) ---
+sample_data/
+
+# --- Data & generated outputs (regenerable; not version-controlled) ---
+exports/
+*.otproj
+*.csv
+*.png
+*.jpg
+*.txt
+*.xlsx
+*.xlsm
+*.docx
+*.pdf
+*.log
+*.err
+
+# Third-party MATLAB model — do NOT commit (licensing)
+Apatite_V1_*.m
+
+# Re-include code/docs/assets that the broad data rules above would otherwise catch
+!requirements.txt
+# splash.png is a build INPUT bundled into the exe by build_win.ps1 (not a
+# generated output), so it is version-controlled despite *.png.
+!splash.png
+
+# --- generated figure/CSV output dirs ---
+viscosity_path_out/
+apatite_smelt_out/

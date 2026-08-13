@@ -1,0 +1,16 @@
+# For apatite_model.py / apatite_inversion.py. The magma_viscosity*.py and
+# giordano2008.py tools are pure stdlib + numpy; viscosity_path.py additionally
+# needs matplotlib for the cooling-path figure.
+# Validated on TWO setups: Python 3.11+ w/ numpy 2.4.6 / scipy 1.17.1 (2026-06-19),
+# and Python 3.9.0 w/ numpy 2.0.2 / scipy 1.13.1 (2026-06-23). Bounds below cover both;
+# on Python 3.9 pip caps you at numpy 2.0.x / scipy 1.13.x, which is fine for these scripts.
+numpy>=2.0
+scipy>=1.13
+openpyxl>=3.1.5   # xlsx import (apatite_inversion.py + M1 EPMA import)
+matplotlib>=3.7   # GUI canvases + figure tools (validated 3.9.4 Py3.9 / 3.10.9 Py3.11+)
+pandas>=2.0       # GUI + M1 data tables (validated 2.3.3 Py3.9)
+sv-ttk>=2.6       # OPTIONAL Sun Valley ttk theme (GUI falls back to stock ttk
+                  # without it; validated on Tk 8.6.9 / Py3.9.0, UI spec v2 B1)
+
+# --- build-time only (packaging, spec M3-3) ---
+# pyinstaller>=6.21   # pip install pyinstaller; then run build_win.ps1
